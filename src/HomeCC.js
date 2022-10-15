@@ -7,7 +7,7 @@ class HomeCC extends React.Component {
   render() {
     return (
       <SafeAreaView style={styles.container}>
-        <Text style={styles.red}>Ruwanya Sumindi</Text>
+        <Text style={styles.red}>My name is RuwanYA sUMINDI</Text>
 
         <View style={styles.box} />
         <View style={styles.box1} />
