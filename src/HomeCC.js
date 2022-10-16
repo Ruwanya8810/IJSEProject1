@@ -1,63 +1,70 @@
 import React from 'react';
-import {SafeAreaView, StyleSheet, View, Text} from 'react-native';
+import {SafeAreaView, StyleSheet, Text, StatusBar} from 'react-native';
 
-//import styles from './HomeCC.styles';
+const Assignment = () => {
+  React.useEffect(() => {
+    functionOne();
+  }, []);
 
-class HomeCC extends React.Component {
-  render() {
-    return (
-      <SafeAreaView style={styles.container}>
-        <Text style={styles.red}>Test prac</Text>
+  const functionOne = () => {
+    const name = 'Apple';
+    // If CONDITIONS
+    if (name === 'BlueBerry') {
+      console.log('Fruit 1', name);
+    } else if (name === 'Orange') {
+      console.log('Fruit 2', name);
+    } else {
+      console.log('Fruit 3', 'Not Available');
+    }
 
-        <View style={styles.box} />
-        <View style={styles.box1} />
-        <View style={styles.box2} />
-      </SafeAreaView>
-    );
-  }
-}
+    //Ternary Operator
+    // name === 'Orange'
+    //   ? console.log('Fruit', true)
+    //   : console.log('Fruit', false);
+
+    // Switch Case
+    // switch (name) {
+    //   case 'Apple':
+    //     console.log('Fruit', true);
+    //     break;
+
+    //   default:
+    //     console.log('Fruit', false);
+    //     break;
+    // }
+
+    const marks = 75;
+    if (mark >= 75) {
+      console.log('A');
+    } else if (mark >= 65) {
+      console.log('B');
+    } else if (mark >= 55) {
+      console.log('C');
+    } else if (mark >= 35) {
+      console.log('s');
+    } else {
+      console.log('w');
+    }
+  };
+
+  return (
+    <SafeAreaView style={styles.container}>
+      <Text style={styles.title}>Lesson 011</Text>
+    </SafeAreaView>
+  );
+};
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    marginTop: StatusBar.currentHeight || 0,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'yellow',
-    fontWeight: 'bold',
-    fontSize: 30,
-    paddingBottom: 20,
-    flexDirection: 'column',
   },
-  red: {
-    fontSize: 25,
-    color: 'red',
-    paddingBottom: 20,
-  },
-  box: {
-    width: 100,
-    height: 100,
-    backgroundColor: 'red',
-  },
-  box1: {
-    width: 100,
-    height: 100,
-    backgroundColor: 'green',
-    padding: 5,
-  },
-  box2: {
-    width: 100,
-    height: 100,
-    backgroundColor: 'red',
-  },
-  mypc: {
-    width: 250,
-    height: 250,
-    backgroundColor: 'black',
-  },
-  urladd: {
-    width: 250,
-    height: 200,
-    backgroundColor: 'black',
+
+  title: {
+    fontSize: 20,
   },
 });
 
-export default HomeCC;
+export default Assignment;
