@@ -1,7 +1,7 @@
 import React from 'react';
 import {SafeAreaView, StyleSheet, Text, StatusBar} from 'react-native';
 
-const HomeCC = () => {
+const Assignment = () => {
   React.useEffect(() => {
     functionOne();
   }, []);
@@ -18,9 +18,16 @@ const HomeCC = () => {
     }
 
     //Ternary Operator
-    // name === 'Orange'
-    //   ? console.log('Fruit', true)
-    //   : console.log('Fruit', false);
+
+    marks >= 75
+      ? console.log('Aa')
+      : marks >= 65
+      ? console.log('Bb')
+      : marks >= 55
+      ? console.log('Cc')
+      : marks >= 35
+      ? console.log('Ss')
+      : console.log('Ww');
 
     // Switch Case
     // switch (name) {
@@ -34,22 +41,46 @@ const HomeCC = () => {
     // }
 
     const marks = 75;
-    if (marks >= 75) {
-      console.log('A');
-    } else if (marks >= 65) {
-      console.log('B');
-    } else if (marks >= 55) {
-      console.log('C');
-    } else if (marks >= 35) {
-      console.log('s');
-    } else {
-      console.log('w');
+
+    switch (true) {
+      case marks >= 75:
+        console.log('A', marks);
+        break;
+
+      case marks >= 65:
+        console.log('B', marks);
+        break;
+
+      case marks >= 55:
+        console.log('C', marks);
+        break;
+
+      case marks >= 35:
+        console.log('S', marks);
+        break;
+
+      default:
+        console.log('W', true);
+        break;
     }
+
+    //   const marks = 75;
+    //   if (marks >= 75) {
+    //     console.log('A');
+    //   } else if (marks >= 65) {
+    //     console.log('B');
+    //   } else if (marks >= 55) {
+    //     console.log('C');
+    //   } else if (marks >= 35) {
+    //     console.log('S');
+    //   } else {
+    //     console.log('W');
+    //   }
   };
 
   return (
     <SafeAreaView style={styles.container}>
-      <Text style={styles.title}>Lesson 011</Text>
+      <Text style={styles.title}>Lesson 11</Text>
     </SafeAreaView>
   );
 };
@@ -67,4 +98,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default HomeCC;
+export default Assignment;
