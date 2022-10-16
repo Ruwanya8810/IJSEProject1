@@ -1,7 +1,7 @@
 import React from 'react';
 import {SafeAreaView, StyleSheet, Text, StatusBar} from 'react-native';
 
-const Assignment = () => {
+const HomeCC = () => {
   React.useEffect(() => {
     functionOne();
   }, []);
@@ -34,13 +34,13 @@ const Assignment = () => {
     // }
 
     const marks = 75;
-    if (mark >= 75) {
+    if (marks >= 75) {
       console.log('A');
-    } else if (mark >= 65) {
+    } else if (marks >= 65) {
       console.log('B');
-    } else if (mark >= 55) {
+    } else if (marks >= 55) {
       console.log('C');
-    } else if (mark >= 35) {
+    } else if (marks >= 35) {
       console.log('s');
     } else {
       console.log('w');
@@ -67,4 +67,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Assignment;
+export default HomeCC;
