@@ -30,9 +30,24 @@ const DATA = [
 
 const Lesson_02 = () => {
   const [listData, setListData] = React.useState(DATA);
+  const [selectedItem, setSelectedItem] = React.useState(null);
+
+  const onPressFruitItem = item => {
+    // setSelectedItem(item);
+
+    let newArray = listData.filter(fruit => fruit !== item);
+    setListData(newArray);
+  };
 
   const FruitItem = ({item}) => (
-    <TouchableOpacity style={styles.item}>
+    <TouchableOpacity
+      style={[
+        styles.box,
+        selectedItem === item
+          ? {backgroundColor: 'red'}
+          : {backgroundColor: 'white'},
+      ]}
+      onPress={() => onPressFruitItem(item)}>
       <Text style={styles.title}>{item.id}</Text>
       <View style={{padding: 10}} />
       <Text style={styles.title}>{item.title}</Text>
@@ -55,7 +70,7 @@ const styles = StyleSheet.create({
     flex: 1,
     marginTop: StatusBar.currentHeight || 0,
   },
-  item: {
+  box: {
     flexDirection: 'row',
     backgroundColor: 'white',
     padding: 20,
@@ -76,6 +91,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 32,
+    color: 'black',
   },
 });
 
